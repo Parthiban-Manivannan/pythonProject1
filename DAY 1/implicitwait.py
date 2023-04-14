@@ -29,5 +29,5 @@ s = mywait.until(EC.visibility_of_element_located((By.XPATH, "//h3[text()='Selen
 s.click()
 
 # Close the webdriver instance
-driver.close().
+driver.close()..
 
