@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 s = Service("C:\\Selenium\\chromedriver.exe")
 driver = webdriver.Chrome(service=s)
+driver.implicitly_wait(20)
 driver.get("https://www.google.com")
 driver.maximize_window()
 sbox=driver.find_element(By.NAME,'q')
