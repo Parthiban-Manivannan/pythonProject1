@@ -1,4 +1,3 @@
-import time
 
 from selenium import webdriver
 from selenium.webdriver import Keys
@@ -11,7 +10,6 @@ driver = webdriver.Chrome(service=s)
 # driver.maximize_window()
 # links = driver.find_elements(By.TAG_NAME, 'a')
 # print(len(links))
-
 # driver.close()
 driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")
 driver.find_element(By.ID,"username").send_keys("parthi14199@gmail.com")
