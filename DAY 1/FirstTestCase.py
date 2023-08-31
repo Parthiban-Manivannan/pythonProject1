@@ -1,16 +1,10 @@
 
 from selenium import webdriver
 from selenium.webdriver import Keys
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
-s = Service("C:\\Selenium\\chromedriver.exe")
-driver = webdriver.Chrome(service=s)
-# driver.get("https://practice.automationtesting.in/")
-# driver.maximize_window()
-# links = driver.find_elements(By.TAG_NAME, 'a')
-# print(len(links))
-# driver.close()
+
+driver = webdriver.Chrome()
 driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin")
 driver.find_element(By.ID,"username").send_keys("parthi14199@gmail.com")
 driver.find_element(By.ID,"password").send_keys("@Arcplay007")
