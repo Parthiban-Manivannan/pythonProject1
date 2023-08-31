@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver import Keys
 def google_search(query):
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=options)
     driver.get("https://www.google.com")
     search_box = driver.find_element_by_name("q")
     search_box.send_keys(query)
