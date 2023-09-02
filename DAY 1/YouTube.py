@@ -1,8 +1,10 @@
-import selenium
+from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 def youtube_search(query):
-    driver = selenium.webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=options)
     driver.get("https://www.youtube.com")
     search_box = driver.find_element_by_name("search_query")
     search_box.send_keys(query)
