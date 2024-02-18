@@ -8,15 +8,14 @@ driver = webdriver.Chrome(options=options)
 driver.get("https://demo.nopcommerce.com/")
 driver.maximize_window()
 
-sbox = driver.find_element(By.XPATH,"//input[@id='small-searchterms']").send_keys("kl")
-time.sleep(5)
-try:
-    print("Display status:",sbox.is_displayed())
-    print("Enabled status:",sbox.is_enabled())
-except:
-    print("Exception")
-time.sleep(5)
-# driver.close()
+sbox = driver.find_element(By.XPATH,"//input[@id='small-searchterms']")
+a=sbox.is_displayed()
+b=sbox.is_enabled()
+
+if a==True:
+    print('Sbox is Test Passed')
+
+driver.close()
 
 
 
