@@ -13,9 +13,8 @@ driver.find_element(By.ID, "submit").click()
 act_title = driver.title
 exp_title = "Logged In Successfully | Practice Test"
 
-if act_title == exp_title:
-    print("Login Test Passed")
-else:
-    print("Login Test Failed")
 
+
+
+assertEqual(act_title,exp_title, "Comparison Done")
 
